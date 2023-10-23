@@ -1,17 +1,1 @@
 
-    if getgenv().RadiumUV.Secure.AntiGroundShots then
-    pcall(function()
-        local TargetVelv5 = Prey.Character[RadiumUV.Silent.Part]
-        TargetVelv5.Velocity = Vector3.new(TargetVelv5.Velocity.X, (TargetVelv5.Velocity.Y * 0.5), TargetVelv5.Velocity.Z)
-        TargetVelv5.AssemblyLinearVelocity = Vector3.new(TargetVelv5.Velocity.X, (TargetVelv5.Velocity.Y * 0.5), TargetVelv5.Velocity.Z)
-    end)
-    
-    if getgenv().RadiumUV.Secure.UnderGroundResolver[1] == true then
-				local playertoresolve = Prey.Character.HumanoidRootPart
-				if playertoresolve.Velocity.X > RadiumUV.UnderGroundResolver.Enabled[2] or playertoresolve.Velocity.X < RadiumUV.Resolver.Enabled[3] or playertoresolve.Velocity.Y > RadiumUV.UnderGroundResolver.Enabled[2] or playertoresolve.Velocity.Y < RadiumUV.UnderGroundResolver.Enabled[3] or playertoresolve.Velocity.Z > RadiumUV.UnderGroundResolver.Enabled[2] or playertoresolve.Velocity.Z < RadiumUV.UnderGroundResolver.Enabled[3] then
-					playertoresolve.Velocity = Vector3.new(0, 0, 0)
-                end
-            end
-		end
-    end)
-    
